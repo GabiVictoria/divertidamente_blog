@@ -113,6 +113,62 @@
                     </li>
               </ul>
             </nav>
+            <nav class="menu">
+              <ul>
+                  <li><a href="../../index.html">Home</a></li>
+                  <li>
+                      <a href="#">Filmes</a>
+                      <ul class="submenu">
+                          <li><a href="../../components/filme1.html">Divertidamente 1</a></li>
+                          <li><a href="../../components/filme2.html">Divertidamente 2</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Personagens</a>
+                    <ul class="submenu">
+                      <li><a href="emocoes/alegria.html">Alegria</a></li>
+                      <li><a href="emocoes/ansiedade.html">Ansiedade</a></li>
+                      <li><a href="emocoes/inveja.html">Inveja</a></li>
+                      <li><a href="emocoes/medo.html">Medo</a></li>
+                      <li><a href="emocoes/nojinho.html">Nojinho</a></li>
+                      <li><a href="emocoes/raiva.html">Raiva</a></li>
+                      <li><a href="emocoes/tedio.html">Tédio</a></li>
+                      <li><a href="emocoes/tristeza.html">Tristeza</a></li>
+                      <li><a href="emocoes/vergonha.html">Vergonha</a></li>
+                  </ul>
+                  </li>
+                  <li><a href="../../components/imagens.html">Imagens</a></li>
+                  <li><a href="#">Comunidade</a>
+                    <ul class="submenu">
+                      <li><a href="../../components/regras.html">Regras Gerais</a></li>
+                        <li><a href="../../components/sobre.html">Sobre Nós</a></li> </ul>
+                  </li>
+              </ul>
+          </nav>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.createElement('div');
+                menuToggle.classList.add('menu-toggle');
+                menuToggle.textContent = 'Menu';
+    
+                document.querySelector('.menu').insertBefore(menuToggle, document.querySelector('.menu ul'));
+    
+                menuToggle.addEventListener('click', function() {
+                    const menu = document.querySelector('.menu ul');
+                    menu.classList.toggle('show');
+                });
+    
+                const submenuToggles = document.querySelectorAll('.menu ul li > a');
+                submenuToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function(event) {
+                        const submenu = this.nextElementSibling;
+                        if (submenu && submenu.classList.contains('submenu')) {
+                            event.preventDefault();
+                            submenu.classList.toggle('show');
+                        }
+                    });
+                });
+            });
+        </script>
         </header>
         <main>
             

@@ -113,9 +113,96 @@
                     </li>
               </ul>
             </nav>
+            <nav class="menu">
+              <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li>
+                      <a href="#">Filmes</a>
+                      <ul class="submenu">
+                          <li><a href="../components/filme1.html">Divertidamente 1</a></li>
+                          <li><a href="../components/filme2.html">Divertidamente 2</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Personagens</a>
+                    <ul class="submenu">
+                      <li><a href="../components/emocoes/alegria.html">Alegria</a></li>
+                      <li><a href="../components/emocoes/ansiedade.html">Ansiedade</a></li>
+                      <li><a href="../components/emocoes/inveja.html">Inveja</a></li>
+                      <li><a href="../components/emocoes/medo.html">Medo</a></li>
+                      <li><a href="../components/emocoes/nojinho.html">Nojinho</a></li>
+                      <li><a href="../components/emocoes/raiva.html">Raiva</a></li>
+                      <li><a href="../components/emocoes/tedio.html">Tédio</a></li>
+                      <li><a href="../components/emocoes/tristeza.html">Tristeza</a></li>
+                      <li><a href="../components/emocoes/vergonha.html">Vergonha</a></li>
+                  </ul>
+                  </li>
+                  <li><a href="../components/imagens.html">Imagens</a></li>
+                  <li><a href="#">Comunidade</a>
+                    <ul class="submenu">
+                      <li><a href="../components/regras.html">Regras Gerais</a></li>
+                        <li><a href="../components/sobre.html">Sobre Nós</a></li> </ul>
+                  </li>
+              </ul>
+          </nav>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.createElement('div');
+                menuToggle.classList.add('menu-toggle');
+                menuToggle.textContent = 'Menu';
+    
+                document.querySelector('.menu').insertBefore(menuToggle, document.querySelector('.menu ul'));
+    
+                menuToggle.addEventListener('click', function() {
+                    const menu = document.querySelector('.menu ul');
+                    menu.classList.toggle('show');
+                });
+    
+                const submenuToggles = document.querySelectorAll('.menu ul li > a');
+                submenuToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function(event) {
+                        const submenu = this.nextElementSibling;
+                        if (submenu && submenu.classList.contains('submenu')) {
+                            event.preventDefault();
+                            submenu.classList.toggle('show');
+                        }
+                    });
+                });
+            });
+        </script>
         </header>
         <main>
-            
+          <section class="comunidade">
+            <h1>Sobre Nós</h1><br>
+            <h3>Lorem ipsum dolor sit, 
+              amet consectetur adipisicing elit. 
+              Laudantium voluptas ipsum repellendus ipsa
+              inventore perspiciatis amet sequi tempora, 
+              amet consectetur adipisicing elit. 
+              Laudantium voluptas ipsum repellendus ipsa
+              inventore perspiciatis amet sequi tempora, 
+              esse enim pariatur. Sit eveniet ullam dignissimos 
+              laboriosam ducimus delectus quasi adipisci!</h3><br><br>
+
+          <div class="container">
+            <div class="caixa">
+              <div class="conteudo">
+                <img src="https://portalpopline.com.br/wp-content/uploads/2024/03/capa-divertidamente-2-758x570.webp" alt="">
+                <p>Elisa Santos Teixeira</p>
+              </div>
+            </div>
+            <div class="caixa">
+              <div class="conteudo">
+                <img src="https://portalpopline.com.br/wp-content/uploads/2024/03/capa-divertidamente-2-758x570.webp" alt="">
+                <p>Emanuel Aguilar Pena</p>
+              </div>
+            </div>
+            <div class="caixa">
+              <div class="conteudo">
+                <img src="https://portalpopline.com.br/wp-content/uploads/2024/03/capa-divertidamente-2-758x570.webp" alt="">
+                <p>Gabrielle Victória Ribeiro</p>
+              </div>
+            </div>
+          </div>
         </main>
     </section>
 </body>

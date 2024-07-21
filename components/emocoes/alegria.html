@@ -113,9 +113,153 @@
                     </li>
               </ul>
             </nav>
+            <nav class="menu">
+              <ul>
+                  <li><a href="../../index.html">Home</a></li>
+                  <li>
+                      <a href="#">Filmes</a>
+                      <ul class="submenu">
+                          <li><a href="../../components/filme1.html">Divertidamente 1</a></li>
+                          <li><a href="../../components/filme2.html">Divertidamente 2</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Personagens</a>
+                    <ul class="submenu">
+                      <li><a href="emocoes/alegria.html">Alegria</a></li>
+                      <li><a href="emocoes/ansiedade.html">Ansiedade</a></li>
+                      <li><a href="emocoes/inveja.html">Inveja</a></li>
+                      <li><a href="emocoes/medo.html">Medo</a></li>
+                      <li><a href="emocoes/nojinho.html">Nojinho</a></li>
+                      <li><a href="emocoes/raiva.html">Raiva</a></li>
+                      <li><a href="emocoes/tedio.html">Tédio</a></li>
+                      <li><a href="emocoes/tristeza.html">Tristeza</a></li>
+                      <li><a href="emocoes/vergonha.html">Vergonha</a></li>
+                  </ul>
+                  </li>
+                  <li><a href="../../components/imagens.html">Imagens</a></li>
+                  <li><a href="#">Comunidade</a>
+                    <ul class="submenu">
+                      <li><a href="../../components/regras.html">Regras Gerais</a></li>
+                        <li><a href="../../components/sobre.html">Sobre Nós</a></li> </ul>
+                  </li>
+              </ul>
+          </nav>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.createElement('div');
+                menuToggle.classList.add('menu-toggle');
+                menuToggle.textContent = 'Menu';
+    
+                document.querySelector('.menu').insertBefore(menuToggle, document.querySelector('.menu ul'));
+    
+                menuToggle.addEventListener('click', function() {
+                    const menu = document.querySelector('.menu ul');
+                    menu.classList.toggle('show');
+                });
+    
+                const submenuToggles = document.querySelectorAll('.menu ul li > a');
+                submenuToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function(event) {
+                        const submenu = this.nextElementSibling;
+                        if (submenu && submenu.classList.contains('submenu')) {
+                            event.preventDefault();
+                            submenu.classList.toggle('show');
+                        }
+                    });
+                });
+            });
+        </script>
         </header>
         <main>
-            
+          <section class="personagem">
+            <h1>Alegria</h1>
+            <section class="media">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://s2-crescer.glbimg.com/QKQ76nXIWxvYCgLodBUXHkILKxE=/0x0:1080x1350/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_19863d4200d245c3a2ff5b383f548bb6/internal_photos/bs/2024/K/s/yKLeXVQxqLy9aKUG7yuA/poster-divertida-mente-2-felicidade.jpg" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="../../assets/joy.jpeg" alt="joy">
+                    </div>
+                </div>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xAFiosh_hsw?si=iUOcAgypm2M8lXepautoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+            </section>
+            <h2>Sobre</h2><hr>
+            <h3>Lorem ipsum dolor sit, 
+              amet consectetur adipisicing elit. 
+              Laudantium voluptas ipsum repellendus ipsa
+              inventore perspiciatis amet sequi tempora, 
+              amet consectetur adipisicing elit. 
+              Laudantium voluptas ipsum repellendus ipsa
+              inventore perspiciatis amet sequi tempora, 
+              esse enim pariatur. Sit eveniet ullam dignissimos 
+              laboriosam ducimus delectus quasi adipisci!</h3><br>
+            <h2>Características</h2><hr>
+            <h3>Lorem ipsum, dolor sit amet consectetur 
+              adipisicing elit. Nisi a recusandae atque hic, 
+              nesciunt eligendi possimus dolorum porro modi nam. 
+              Repellendus repudiandae id molestias, maiores quis
+              nulla temporibus beatae cupiditate.</h3><br><br>
+
+            <table class="tab-personagem" Border="1">
+                <tr>
+                    <td class="principal">Alegria</td>
+                </tr>
+                <tr>
+                  <td class="principal">Informações</td>
+                </tr>
+                <tr>
+                    <td><span>Filmes: </span>
+                      <ul class="lista-tab">
+                        <li>Divertidamente</li>
+                        <li>Divertidamente 2</li>
+                      </ul>
+                    </td>
+                </tr>
+                <tr>
+                  <td><span>Dubladores</span>
+                    <ul class="lista-tab">
+                      <li>Amy Poehle</li>
+                      <li>Miá Mello</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span>Animadores: </span>Pete Docter</td>
+                </tr>
+
+                <tr>
+                  <td class="principal">Gostos</td>
+                </tr>
+                <tr>
+                    <td><span>Gosta: </span>diversão</td>
+                </tr>
+                <tr>
+                    <td><span>Não gosta: </span>da tristeza</td>
+                </tr>
+
+                <tr>
+                  <td class="principal">Adicionais</td>
+                </tr>
+                <tr>
+                  <td><span>Cor tema: </span>amarelo</td>
+                </tr>
+                <tr>
+                  <td><span>Inspirações: </span>estrela, Audrey Hepburn, Sininho</td>
+                </tr>
+                <tr>
+                  <td><span>Personalidade: </span>alegre, positiva, animada</td>
+                </tr>
+            </table><br>
+
+            <h2>Aparência</h2><hr>
+            <h3>Lorem ipsum, dolor sit amet consectetur 
+              adipisicing elit. Nisi a recusandae atque hic, 
+              nesciunt eligendi possimus dolorum porro modi nam. 
+              Repellendus repudiandae id molestias, maiores quis
+              nulla temporibus beatae cupiditate.</h3>
         </main>
     </section>
 </body>

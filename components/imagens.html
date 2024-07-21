@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="imagens.css">
     <title>Imagens</title>
 </head>
@@ -112,11 +113,97 @@
                 </li>
           </ul>
         </nav>
+        <nav class="menu">
+          <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li>
+                  <a href="#">Filmes</a>
+                  <ul class="submenu">
+                      <li><a href="../components/filme1.html">Divertidamente 1</a></li>
+                      <li><a href="../components/filme2.html">Divertidamente 2</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">Personagens</a>
+                <ul class="submenu">
+                  <li><a href="../components/emocoes/alegria.html">Alegria</a></li>
+                  <li><a href="../components/emocoes/ansiedade.html">Ansiedade</a></li>
+                  <li><a href="../components/emocoes/inveja.html">Inveja</a></li>
+                  <li><a href="../components/emocoes/medo.html">Medo</a></li>
+                  <li><a href="../components/emocoes/nojinho.html">Nojinho</a></li>
+                  <li><a href="../components/emocoes/raiva.html">Raiva</a></li>
+                  <li><a href="../components/emocoes/tedio.html">Tédio</a></li>
+                  <li><a href="../components/emocoes/tristeza.html">Tristeza</a></li>
+                  <li><a href="../components/emocoes/vergonha.html">Vergonha</a></li>
+              </ul>
+              </li>
+              <li><a href="../components/imagens.html">Imagens</a></li>
+              <li><a href="#">Comunidade</a>
+                <ul class="submenu">
+                  <li><a href="../components/regras.html">Regras Gerais</a></li>
+                    <li><a href="../components/sobre.html">Sobre Nós</a></li> </ul>
+              </li>
+          </ul>
+      </nav>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.createElement('div');
+            menuToggle.classList.add('menu-toggle');
+            menuToggle.textContent = 'Menu';
+
+            document.querySelector('.menu').insertBefore(menuToggle, document.querySelector('.menu ul'));
+
+            menuToggle.addEventListener('click', function() {
+                const menu = document.querySelector('.menu ul');
+                menu.classList.toggle('show');
+            });
+
+            const submenuToggles = document.querySelectorAll('.menu ul li > a');
+            submenuToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(event) {
+                    const submenu = this.nextElementSibling;
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        event.preventDefault();
+                        submenu.classList.toggle('show');
+                    }
+                });
+            });
+        });
+    </script>
     </header>
     <main>
-          <div class="card">
-
-          </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
+            <div class="card">
+              <img src="https://s2-gshow.glbimg.com/dNCoZiC_keIRzhEw4UmfREovP9g=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/Q/t3mVQNQu6qdzvBjCthUg/divertidamente-divertida-mente-ansiedade-alegria-inside-out-filme-pixar.jpg" alt="">
+            </div>
     </main>
 </body>
 </html>
