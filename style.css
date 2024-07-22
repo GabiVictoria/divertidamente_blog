@@ -144,9 +144,21 @@ main{
   main{width: 100vw;}
   .menu{display: block;}
   .logo{width: 25vw;}
+  .container{
+    flex-wrap: wrap;
   }
-
-  .menu ul {
+  .indice ol{
+    min-width: min-content ;
+  }
+  .media{
+    flex-direction: column;
+  }
+  .media iframe{
+    display: none;
+  }
+  
+  }
+.menu ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -235,7 +247,7 @@ main{
 /* styles ema */
 .container {
   display: flex;
-  gap: 10px; /* Ajuste o valor de acordo com o espaçamento desejado */
+  gap: 10px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,7 +256,7 @@ main{
   position: relative;
   width: 300px;
   height: 300px;
-  background-color: rgba(48, 0, 95, 0.641); /* Corrigido rgba */
+  background-color: rgba(04,03,05,.5); 
   border-radius: 50%;
   overflow: hidden;
 }
@@ -271,15 +283,15 @@ main{
   content: '';
   position: absolute;
   inset: 6px;
-  background: rgba(75, 6, 144, 0.445); /* Ajuste a opacidade conforme necessário */
+  background: #4b4b4b;
   border-radius: 50%;
   z-index: 1;
-  backdrop-filter: blur(10px); /* Ajuste o valor do desfoque conforme necessário */
+  backdrop-filter: blur(10px); 
 }
 .conteudo {
   position: absolute;
   inset: 30px;
-  border: 6px solid rgba(61, 2, 120, 0.445);
+  border: 6px solid #040305;
   z-index: 2;
   border-radius: 50%;
   overflow: hidden;
@@ -325,34 +337,6 @@ main{
   padding-right: 30px;
 }
 
-.indice p {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-  margin: 0; /* Remova margens externas para evitar espaços adicionais */
-  padding-bottom: 10px; /* Ajuste o preenchimento interno */
-  padding-top: 10px;
-  padding-left: 5px;
-  font-weight: bold;
-}
-
-.indice ol {
-  border: solid 2px;
-  padding-left: 35px; /* Ajuste o preenchimento interno */
-  padding-right: 20px;
-  margin-left: 33%; /* Ajuste a margem para controlar o espaçamento ao redor */
-  margin-right: 32%;
-  width: auto; /* Deixe a largura automática para se ajustar ao conteúdo */
-}
-
-.indice li {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-  padding-left: 5px; /* Mantenha um pequeno preenchimento à esquerda dos itens */
-  margin-bottom: 5px; /* Margem inferior para espaçar os itens */
-  text-align: justify;
-  margin-left: 0; /* Remova a margem esquerda */
-}
-
 .cont-regras h2{
   font-family: 'Times New Roman', Times, serif;
   padding-left: 30px;
@@ -360,8 +344,8 @@ main{
 }
 
 hr {
-  width: 95%; /* Define a largura da linha horizontal para 50% do contêiner pai */
-  margin: 20px auto; /* Centraliza a linha horizontal */
+  width: 95%; 
+  margin: 20px auto;
 }
 
 .cont-regras h3 li{
@@ -374,6 +358,11 @@ hr {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   text-align: justify;
+}
+
+.cont-regras ul li{
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 70px;
 }
 
 
@@ -445,21 +434,21 @@ hr {
 }
 .media{
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
  margin-bottom: 5vh;
+ 
 }
 .media iframe{
-  width: 35vw;
-  height: 45vh;
+  width: 520px;
+  height: 330px;
   border-radius: 1rem;
   box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
 }
 .flip-card {
   background-color: transparent;
-  width: 20vw;
-  height: 45vh;
+  width: 300px;
+  height: 330px;
   perspective: 1000px;
 }
 .flip-card img{
@@ -499,20 +488,21 @@ hr {
 .filme h1{
   font-family: "truculenta", sans-serif;
   text-align: center;
-  font-size: 2.5rem;
-  padding-top: 5vh;
-  font-weight: 700;
+  font-size: 50px;
+  padding-top: 30px;
+}
+.filme h2{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.filme h3{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-.filme h2{
-  text-align: left;
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-inline: 6vw;
-}
-.filme p{
-  font-size: 1rem;
-  text-align: justify;
-  margin-inline: 5vw;
-  margin-bottom: 2vh;
-}
