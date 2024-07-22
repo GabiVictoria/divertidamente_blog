@@ -256,7 +256,7 @@ main{
   position: relative;
   width: 300px;
   height: 300px;
-  background-color: rgba(04,03,05,.5); 
+  background-color: rgba(37, 0, 72, 0.641);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -283,7 +283,7 @@ main{
   content: '';
   position: absolute;
   inset: 6px;
-  background: #4b4b4b;
+  background: rgba(32, 0, 63, 0.445);
   border-radius: 50%;
   z-index: 1;
   backdrop-filter: blur(10px); 
@@ -291,7 +291,7 @@ main{
 .conteudo {
   position: absolute;
   inset: 30px;
-  border: 6px solid #040305;
+  border: 6px solid rgba(61, 2, 120, 0.445);
   z-index: 2;
   border-radius: 50%;
   overflow: hidden;
@@ -399,7 +399,7 @@ hr {
   border: 1px solid black; 
 }
 
-.tab-personagem .principal{
+.tab-personagem .alegria{
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   text-align: center;
@@ -407,6 +407,86 @@ hr {
   padding-right: 90px;
   background-color: #fbff00;
   border: 1px solid black;
+}
+
+.tab-personagem .ansiedade{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #ff8800;
+  border: 1px solid black;
+}
+
+.tab-personagem .inveja{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #00e8bd;
+  border: 1px solid black;
+}
+
+.tab-personagem .medo{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #b659fe;
+  border: 1px solid black;
+}
+
+.tab-personagem .nojinho{
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #05cd29;
+  border: 1px solid black;
+}
+
+.tab-personagem .raiva{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #ff2c2c;
+  border: 1px solid black;
+}
+
+.tab-personagem .tedio{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #7220ff;
+  border: 1px solid black;
+}
+
+.tab-personagem .tristeza{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #3e71ff;
+  border: 1px solid black;
+}
+
+.tab-personagem .vergonha{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 90px;
+  background-color: #ff62d2;
+  border: 1px solid black;
 }
 
 .tab-personagem td{
@@ -479,7 +559,6 @@ hr {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border: 2px solid yellow;
   border-radius: 1rem;
 }
 .flip-card-back {

@@ -20,14 +20,9 @@ main{
     padding: 8px;
     border-radius: 10px;
     background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
-    filter: blur(0.7px);
-    cursor: pointer;
+      cursor: pointer;
   }
-  .card:hover{
-    transition: 1s ease;
-    filter: blur(0px);
-    /* transform: scale(1.03); */
-  }
+  
   .card img{
     width: 100%;
     height: 100%;
