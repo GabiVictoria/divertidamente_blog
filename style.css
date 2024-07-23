@@ -44,7 +44,7 @@ body{
    padding-inline: 15vw;
 }
 main{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255,0.95);
     width: 70vw;
     height: auto;
     border-radius: 10px;
@@ -133,16 +133,17 @@ main{
 @media (max-width: 768px) {
   body{
     background-image: none;
-    background-color: yellow;
+    background-color: whitesmoke;
     padding-inline: 0vw;
   }
   header{width: 100vw;
+    background-color: yellow;
   }
   nav{
     display: none;
   }
   main{width: 100vw;}
-  .menu{display: block;}
+  .menu{display: block; z-index: 1000;}
   .logo{width: 25vw;}
   .container{
     flex-wrap: wrap;
@@ -256,7 +257,7 @@ main{
   position: relative;
   width: 300px;
   height: 300px;
-  background-color: rgba(37, 0, 72, 0.641);
+  background-color: rgba(170, 0, 255, 0.641);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -589,6 +590,7 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
 }
 .post-box {
   display: flex;
@@ -700,6 +702,7 @@ hr {
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 .alert p{margin: 10px;}
 .alert h2{text-align: center;}
